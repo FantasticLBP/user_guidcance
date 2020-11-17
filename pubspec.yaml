@@ -1,0 +1,22 @@
+name: user_guidcance
+description: User guidance is an easy way to use new function guidance.
+version: 0.0.1
+homepage: https://github.com/FantasticLBP/user_guidcance
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    androidPackage: com.Github.FantasticLBP.user_guidcance
+    pluginClass: UserGuidcancePlugin
+  assets:
+    - assets/images/
