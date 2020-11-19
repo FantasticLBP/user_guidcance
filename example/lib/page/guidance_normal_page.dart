@@ -15,7 +15,6 @@ class GuidanceNormalPage extends StatelessWidget {
         context: '客观，这里是新功能，欢迎尝鲜体验哦！',
          buttonText: '好的，知道了', 
          rectType: GuidanceRectType.rectangle, 
-         ovalKey: elementKey, 
          elementKey: elementKey , 
          clipContext: context
         );

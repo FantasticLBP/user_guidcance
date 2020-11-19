@@ -14,7 +14,6 @@ class GuidanceStepPage extends StatelessWidget {
       context: '大佬，这是一个新开发的功能哦，主要是为了让你方便的知道当前功能的使用方法，快速上手', 
       buttonText: '下一步', 
       rectType: GuidanceRectType.circle, 
-      ovalKey: secondKey, 
       elementKey: secondKey, 
       clipContext: context
     );

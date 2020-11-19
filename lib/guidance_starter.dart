@@ -35,7 +35,11 @@ class UserGuidance {
             shape: contextModel.rectType,
             content: Guidetarget(
                 child: GuidanceView(
-                    contextModel: contextModel, handleNextStep: next))),
+                    contextModel: contextModel, 
+                    handleNextStep: next
+                )
+              )
+            ),
       );
     }
     return targets;

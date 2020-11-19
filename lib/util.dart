@@ -5,7 +5,6 @@ import 'target_position.dart';
 TargetPosition getTargetCurrent(TargetFocus target) {
   if (target.keyTarget != null) {
     var key = target.keyTarget;
-
     try {
       final RenderBox renderBoxRed = key.currentContext.findRenderObject();
       final size = renderBoxRed.size;
@@ -22,15 +21,15 @@ TargetPosition getTargetCurrent(TargetFocus target) {
 }
 
 Rect calcuateElementFrmae (GlobalKey elementKey) {
-    if (elementKey == null) {
-      assert(elementKey != null, '元素的 GlobalKey 必须存在');
-      return Rect.zero;
-    }
-    RenderBox element = elementKey.currentContext.findRenderObject();
-    Size size = element.size;
-    Offset position = element.localToGlobal(Offset(0, 0));
-    Rect rect = Rect.fromLTRB(position.dx, position.dy, position.dx + size.width, position.dy + size.height);
-    return rect;
+  if (elementKey == null) {
+    assert(elementKey != null, '元素的 GlobalKey 必须存在');
+    return Rect.zero;
   }
-
-
+  RenderBox element = elementKey.currentContext.findRenderObject();
+  print('2222');
+  print(element);
+  Size size = element.size;
+  Offset position = element.localToGlobal(Offset(0, 0));
+  Rect rect = Rect.fromLTRB(position.dx, position.dy, position.dx + size.width, position.dy + size.height);
+  return rect;
+}

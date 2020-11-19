@@ -39,15 +39,13 @@ class GuidanceContextInfo {
   String context;
   String buttonText;
   GuidanceRectType rectType;
-  // Rect ovalRect;
-  GlobalKey ovalKey;
   Rect dialogViewRect;
   BuildContext clipContext;
   String message;
   GlobalKey elementKey;
   Rect contentRect;
 
-  // pad 324 phone 290
+  // safe area: pad 324 phone 290
   double contextWidth = 290;
   double arrowWidth = 30;
   double arrowHeight = 70;
@@ -55,7 +53,7 @@ class GuidanceContextInfo {
   double buttonWidth = 128;
 
   get ovalRect {
-    return calcuateElementFrmae(ovalKey);
+    return calcuateElementFrmae(elementKey);
   }
 
   get arrowSeporotar {
@@ -69,13 +67,11 @@ class GuidanceContextInfo {
   GuidanceContextInfo({
     this.title, 
     this.context, 
-    // this.ovalRect, 
-    this.ovalKey,
     this.clipContext, 
     this.elementKey, 
     this.buttonText = "下一步", 
     this.rectType = GuidanceRectType.rectangle
-    }) : assert(elementKey != null || ovalKey != null);
+    }) : assert(elementKey != null);
 
   double getCircleArrowSeparatorWithRadius (double radius) {
     double separator = sqrt(pow(radius, 2)*2)- radius -16;
